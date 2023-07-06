@@ -1,0 +1,29 @@
+Resources:
+  MyInstanciaEC2:
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-053b0d53c279acc90"
+      KeyName: "Nombre de la llave"
+      InstanceType: "t2.micro"
+      BlockDeviceMappings: 
+      - DeviceName: "/dev/sdm"
+        Ebs: 
+          VolumeType: "gp3"
+          DeleteOnTermination: "true"
+          VolumeSize: "10"
+      SecurityGroups:
+      - !Ref EC2SecurityGroup
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow http and ssh to client host
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: "IP"    
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: "IP"
