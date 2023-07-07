@@ -25,11 +25,7 @@ def insert(resultado):
     else:
         print("ya hay Datos Insertados")
 
-# def deletedoc():
-#     x=conn.local.clientes.delete_many({})
-#     print(x.deleted_count, "Información de clientes Borrad")
 
-# deletedoc()
 resultado=select()
 insert(resultado)
 
@@ -50,16 +46,4 @@ def select_one_user(id: str):
 
 
     
-
-# @user.get("/user")
-# def select_all_users(collecion):
-#     result=collecion.find()
-#     return result
-    # for result in result:
-    #     return result
-    ##return (client.clientes_MELI.clientes.find())
-
-# @user.get("/user/{id}")
-# def select_one_user():
-#     return "Hola Paula, que tal tu día"
 

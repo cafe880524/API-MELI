@@ -1,2 +1,5 @@
+sudo systemctl start mongod
 
-uvicorn main:app --reload --host '172.31.88.230'
+IP=$(ip addr show |grep -w inet |grep -v 127.0.0.1|awk '{ print $2}'| cut -d "/" -f 1)
+
+uvicorn main:app --reload --host $IP
