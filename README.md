@@ -5,7 +5,7 @@ Instrucciones de ejecución
 
 La API de Consulta de clientes, está construida bajo una arquitectura REST, desarrollada  Python3, sobre el framework web FASTAPI y desplegada en un servidor WEB uvicornm, con una base de datos NoSQL MongoDB. La solución se construyó en un ambiente Linux - Ubuntu 22.04 el cual se está ejecutando en una instancia EC2 de AWS
 
-Requisitos
+#Requisitos
 
 •	Instalar la versión reciente de MongoDB para ubuntu, seguir los pasos de la documentación oficial 
 https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition
@@ -35,7 +35,8 @@ https://www.uvicorn.org/#quickstart
 
 $ sudo pip install uvicorn
 
-Ejecución de la API
+#Ejecución de la API
+
 1.	Para la  ejecución de la API se debe contar con un sistema Ubuntu, para esta solución se utilizó la versión de Ubuntu 22.04 desplegado en una EC2 mediante Cloudformation
 Puedes descargar el cloudformation utilizado: 
 https://github.com/cafe880524/API-MELI/tree/main/anexos
@@ -52,7 +53,7 @@ IP=$(ip addr show |grep -w inet |grep -v 127.0.0.1|awk '{ print $2}'| cut -d "/"
 o	Subir el servidor uvicorn pasando como parámetro de host la ip del servidor
 uvicorn main:app --reload --host $ip
 
-Consulta de Clientes
+#Consulta de Clientes
 
 Posterior a que el servidor uvicorn se haya desplegado correctamente, ya podemos hacer uso de nuestra API, para consultar todos los clientes almacenados en la base de datos, o consultar cliente por cliente, pasando como parámetro el “id”. El  acceso al servicio se puede hacer de dos formas una haciendo una petición directa a la URL expuesta u utilizando la interfaz gráfica de usuario
 Consulta directa a la URL expuesta del Servicio 
