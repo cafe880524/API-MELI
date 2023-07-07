@@ -2,27 +2,37 @@
 
 
 Instrucciones de ejecución 
+
 La API de Consulta de clientes, está construida bajo una arquitectura REST, desarrollada  Python3, sobre el framework web FASTAPI y desplegada en un servidor WEB uvicornm, con una base de datos NoSQL MongoDB. La solución se construyó en un ambiente Linux - Ubuntu 22.04 el cual se está ejecutando en una instancia EC2 de AWS
+
 Requisitos
+
 •	Instalar la versión reciente de MongoDB para ubuntu, seguir los pasos de la documentación oficial 
 https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#install-mongodb-community-edition
+
 •	Instalar Python3, en mi caso utilice la versión ya instalada en el Ubuntu Python 3.10.6
 $ sudo apt-get update
 $ sudo apt-get install python3.10
+
 •	Instalar el módulo pip3
 $ sudo apt-get update
 $ sudo apt-get install python3.6
+
 •	Instalamos la librería Pymongo, la cual permite interactuar con MongoDB desde Python
 https://pymongo.readthedocs.io/en/stable/installation.html
+
 $  pip install pymongo
 •	Instalamos pydantic, el cual es una biblioteca de validación de datos para Python
 https://docs.pydantic.dev/latest/install/
+
 $ pip install pydantic
 •	Instalamos FastAPI, este framework permitirá crear API con Python 3.7+
 https://fastapi.tiangolo.com/#typer-the-fastapi-of-clis
+
 $ pip install fastapi
 •	Instalamos uvicorn , el cual permite desplegar nuestra API en un servidor web
 https://www.uvicorn.org/#quickstart
+
 $ sudo pip install uvicorn
 
 Ejecución de la API
