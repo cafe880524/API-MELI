@@ -3,7 +3,6 @@ from config.db import conn
 from esquemas.esquema import userEntity, usersEntity
 from modulos.modelobd import  modelobd
 from urllib.request import urlopen
-##from passlib.hash import sha256_crypt
 import json
 import urllib.parse
 from bson import ObjectId
