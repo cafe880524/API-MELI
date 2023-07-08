@@ -1,7 +1,6 @@
 from fastapi import APIRouter ##Defien rutas dentrl del archivo
 from config.db import conn
 from esquemas.esquema import userEntity, usersEntity
-from modulos.modelobd import  modelobd
 from urllib.request import urlopen
 import json
 import urllib.parse
