@@ -37,7 +37,12 @@ def select_one_user(id: str):
     return userEntity(conn.local.clientes.find_one({"id":id}))
     
 
-
+@rutaurl.get("/{valor}", tags=["Consulta de Usuarios por atributos"])
+def select_param(valor ):
+    x = valor.split("=")
+    param=x[0]
+    value=x[1]
+    return userEntity(conn.local.clientes.find_one({param:value}))
 
 
 
